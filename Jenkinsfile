@@ -10,7 +10,6 @@ pipeline {
         stage('Original'){
             steps {
                 echo 'Original'
-                pwd
             }
         }
         stage('Build') {
