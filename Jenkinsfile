@@ -10,7 +10,7 @@ pipeline {
         stage('Original'){
             steps {
                 echo 'Original'
-                echo `pwd`
+                pwd
             }
         }
         stage('Build') {
