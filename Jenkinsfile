@@ -15,7 +15,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building' 
-                node {
+                script {
                     if(fileExists('/var/lib/jenkins/workspace/JenkinsPipeline/index.html')){
                         echo 'File Not Exists'
                         error 'File Not Exists'
