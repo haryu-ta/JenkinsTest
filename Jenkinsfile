@@ -14,7 +14,13 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Building'    
+                echo 'Building' 
+                node {
+                    if(fileExists '/var/lib/jenkins/workspace/JenkinsPipeline/index.html'){
+                        echo 'File Not Exists'
+                        error 'File Not Exists'
+                    }
+                }   
             }
         }
         stage('Deploy') {
