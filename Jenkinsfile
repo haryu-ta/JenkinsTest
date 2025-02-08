@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo 'Building' 
                 script {
-                    if(fileExists('/var/lib/jenkins/workspace/JenkinsPipeline/index.html')){
+                    if(!fileExists('/var/lib/jenkins/workspace/JenkinsPipeline/index.html')){
                         echo 'File Not Exists'
                         error 'File Not Exists'
                     }
